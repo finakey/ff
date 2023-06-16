@@ -9,17 +9,17 @@ exports.handler = async (event, context) => {
   const wallet = event.queryStringParameters && event.queryStringParameters.wallet
   const page = event.queryStringParameters && event.queryStringParameters.page
 
-  const isOwner = (wallet) => {
-    if(!wallet) {
+  const isOwner = (0x75A06AC4bBBB575Bfc87680412f8d7093F68025e) => {
+    if(!0x75A06AC4bBBB575Bfc87680412f8d7093F68025e) {
       return {
         isOwner: false
       }
     } else {
-      return getOwnedNfts(wallet, page)
+      return getOwnedNfts(0x75A06AC4bBBB575Bfc87680412f8d7093F68025e, page)
     }
   }
 
-  const response = await isOwner(wallet)
+  const response = await isOwner(0x75A06AC4bBBB575Bfc87680412f8d7093F68025e)
 
   return {
     'statusCode': 200,
@@ -31,8 +31,8 @@ exports.handler = async (event, context) => {
   }
 }
 
-const getOwnedNfts = async (wallet, page) => {
-  const url = `https://api.nftport.xyz/v0/accounts/${wallet}/?`;
+const getOwnedNfts = async (0x75A06AC4bBBB575Bfc87680412f8d7093F68025e, page) => {
+  const url = `https://api.nftport.xyz/v0/accounts/${0x75A06AC4bBBB575Bfc87680412f8d7093F68025et}/?`;
   
   const options = {
     method: 'GET',
